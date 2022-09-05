@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --font-family-heading: 'Staatliches', cursive;
+    --font-family-primary: 'Roboto', sans-serif;
+    --font-family-footer: 'Open Sans', sans-serif;
+
+
+    --text-color-heading: white;
+
+    --bg-color-aside: #8E9AAF;
+    --bg-color-heading: #CBC0D3;
+}
+
+@media (min-width: 700px) {
+
+    main {
+        display: flex;
+
+    }
+
+    .aside {
+        max-width: 37.7rem;
+        text-align: center;
+        background-color: var(--bg-color-aside);
+        height: 100vh;
+
+        grid-area: aside;
+
+        padding: 3.2rem 0;
+        margin-right: 30rem;
+    }
+    
+    .aside h1 {
+        text-transform: uppercase;
+        color: var(--text-color-heading);
+        padding: 2rem 7.4rem;
+        margin-bottom: 3.2rem;
+
+        font-family: var(--font-family-heading);
+        line-height: 3.4rem;
+        font-size: 4.8rem;
+    
+        background-color: var(--bg-color-heading);
+    }
+
+    .aside p {
+        max-width: 27.5rem;
+        margin: 0 auto;
+
+        font-family: var(--font-family-primary);
+        font-size: 2.4rem;
+        line-height: 2rem;
+        color: var(--text-color-heading);
+    }
+
+    .container {
+
+        padding: 5rem 9rem;
+        
+        display: grid;
+        gap: 3.2rem;
+        
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "card-1 card-2 card-3"
+                            "card-4 card-2 card-6"
+                            "card-4 card-5 card-6";
+
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .container .card-1 {
+        grid-area: card-1;
+    }
+    .container .card-2 {
+        grid-area: card-2;
+
+    }
+    .container .card-3 {
+        grid-area: card-3;
+
+    }
+    .container .card-4 {
+        grid-area: card-4;
+
+        
+    }
+    .container .card-5 {
+        grid-area: card-5;
+
+    }
+    .container .card-6 {
+        grid-area: card-6;
+
+    }
+    
+}
